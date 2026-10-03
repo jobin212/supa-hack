@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1206" height="2622" viewBox="0 0 402 874" role="img" aria-labelledby="title description">
+  <title id="title">Threadsong: from thread to song</title>
+  <desc id="description">A vertical workflow. An Ando mention sends a webhook to Supabase Compute. Compute verifies it and saves the job in Supabase Postgres. Its background worker reads the thread and calls Google: Gemini summarizes, then Lyria writes lyrics and music. The worker uploads the MP3 to Supabase Storage and replies in Ando with a song link. One Python service coordinates the flow for one workspace. Repeated Compute boxes are steps in the same instance.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="4" refY="3" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0 0 L5 3 L0 6" fill="none" stroke="#96a39e" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.8px; fill: #277653; }
+      .heading { font-size: 28px; font-weight: 700; letter-spacing: -1px; fill: #18332b; }
+      .subtitle { font-size: 14px; fill: #5e7068; }
+      .name { font-size: 17px; font-weight: 700; fill: #1b342b; }
+      .detail { font-size: 13px; fill: #4f645a; }
+      .number { font-size: 13px; font-weight: 700; text-anchor: middle; dominant-baseline: central; }
+      .connector { stroke: #96a39e; stroke-width: 1.4; fill: none; marker-end: url(#arrow); }
+      .box { stroke: #dce5df; stroke-width: 1; }
+    </style>
+  </defs>
+  <rect width="402" height="874" fill="#f7faf7"/>
+  <text class="eyebrow" x="24" y="47">THREADSONG</text>
+  <text class="heading" x="24" y="82">From thread to song</text>
+  <text class="subtitle" x="24" y="105">A workflow powered by Supabase</text>
+
+  <g transform="translate(24 124)">
+    <rect class="box" width="354" height="70" rx="15" fill="#ffffff"/>
+    <circle cx="28" cy="35" r="15" fill="#edf0ed"/>
+    <text class="number" x="28" y="35" fill="#53655d">1</text>
+    <text class="name" x="57" y="29">Ando</text>
+    <text class="detail" x="57" y="50">Mention @Songbot in a thread</text>
+  </g>
+  <path class="connector" d="M201 199 V209"/>
+  <g transform="translate(24 214)">
+    <rect class="box" width="354" height="70" rx="15" fill="#eaf7ef"/>
+    <circle cx="28" cy="35" r="15" fill="#ccebd9"/>
+    <text class="number" x="28" y="35" fill="#216a47">2</text>
+    <text class="name" x="57" y="29">Supabase Compute</text>
+    <text class="detail" x="57" y="50">Receive webhook + verify sender</text>
+  </g>
+  <path class="connector" d="M201 289 V299"/>
+  <g transform="translate(24 304)">
+    <rect class="box" width="354" height="70" rx="15" fill="#eaf7ef"/>
+    <circle cx="28" cy="35" r="15" fill="#ccebd9"/>
+    <text class="number" x="28" y="35" fill="#216a47">3</text>
+    <text class="name" x="57" y="29">Supabase Postgres</text>
+    <text class="detail" x="57" y="50">Save the job and its progress</text>
+  </g>
+  <path class="connector" d="M201 379 V389"/>
+  <g transform="translate(24 394)">
+    <rect class="box" width="354" height="70" rx="15" fill="#eaf7ef"/>
+    <circle cx="28" cy="35" r="15" fill="#ccebd9"/>
+    <text class="number" x="28" y="35" fill="#216a47">4</text>
+    <text class="name" x="57" y="29">Supabase Compute</text>
+    <text class="detail" x="57" y="50">Worker reads the thread</text>
+  </g>
+  <path class="connector" d="M201 469 V479"/>
+  <g transform="translate(24 484)">
+    <rect class="box" width="354" height="70" rx="15" fill="#edf3fd"/>
+    <circle cx="28" cy="35" r="15" fill="#dbe7fa"/>
+    <text class="number" x="28" y="35" fill="#3864a1">5</text>
+    <text class="name" x="57" y="29">Google AI</text>
+    <text class="detail" x="57" y="50">Gemini summary → Lyria song</text>
+  </g>
+  <path class="connector" d="M201 559 V569"/>
+  <g transform="translate(24 574)">
+    <rect class="box" width="354" height="70" rx="15" fill="#eaf7ef"/>
+    <circle cx="28" cy="35" r="15" fill="#ccebd9"/>
+    <text class="number" x="28" y="35" fill="#216a47">6</text>
+    <text class="name" x="57" y="29">Supabase Storage</text>
+    <text class="detail" x="57" y="50">Worker uploads the MP3</text>
+  </g>
+  <path class="connector" d="M201 649 V659"/>
+  <g transform="translate(24 664)">
+    <rect class="box" width="354" height="70" rx="15" fill="#ffffff"/>
+    <circle cx="28" cy="35" r="15" fill="#edf0ed"/>
+    <text class="number" x="28" y="35" fill="#53655d">7</text>
+    <text class="name" x="57" y="29">Back to Ando</text>
+    <text class="detail" x="57" y="50">Songbot replies with a song link</text>
+  </g>
+
+  <path d="M24 762 H378" stroke="#dce5df" stroke-width="1"/>
+  <text class="eyebrow" x="201" y="789" text-anchor="middle">ONE COMPUTE INSTANCE</text>
+  <text class="subtitle" x="201" y="811" text-anchor="middle">Python bot + background worker</text>
+  <text class="subtitle" x="201" y="831" text-anchor="middle">for your workspace</text>
+</svg>
